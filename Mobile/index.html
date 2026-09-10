@@ -10,6 +10,9 @@
 
 *{box-sizing: border-box;}
 
+html{
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -61,7 +64,7 @@ body {
     width: 500px;
     background-color: rgb(255, 89, 255);
     opacity: 0.3;
-    position: absolute;
+    position: fixed;
     z-index: -2;
     border-radius: 50%;
     filter: blur(80px);
@@ -90,7 +93,6 @@ body {
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script>
-        
 gsap.from (".container", {
     y: 100,
     opacity: 0,
@@ -101,10 +103,11 @@ function emoji () {
     let p = document.createElement("p");
     document.body.appendChild(p);
     p.classList.add("emoji");
-    let emojis = ["❤️", "🌸","💐","✨",];
+    let emojis = ["❤️", "🌸","💐","🎉","🎁"];
     let randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
     p.textContent = randomEmoji;
-    gsap.fromTo(p,
+    const tl = gsap.timeline();
+    tl.fromTo(p,
         {
             x: Math.random() * window.innerWidth,
             scale: Math.random() * 1.5 + 2,
@@ -114,12 +117,16 @@ function emoji () {
             y: window.innerHeight + 200,
             rotate: 360,
             ease: "none",
+        }).
+        to(p, {
+            scale: 0,
+            opacity: 0,
+            ease: "none",
             onComplete: () => {
                 p.remove();
-            },
-        },
-    )
-};
+            }
+        })
+}
 setInterval(emoji, 800);
 gsap.from(".subline", {
     opacity: 0,

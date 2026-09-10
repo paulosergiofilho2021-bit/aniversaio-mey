@@ -9,7 +9,7 @@ function emoji () {
     let p = document.createElement("p");
     document.body.appendChild(p);
     p.classList.add("emoji");
-    let emojis = ["❤️", "🌸","💐","✨",];
+    let emojis = ["❤️", "🌸","💐","🎉","🎁"];
     let randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
     p.textContent = randomEmoji;
     const tl = gsap.timeline();
@@ -23,9 +23,6 @@ function emoji () {
             y: window.innerHeight + 200,
             rotate: 360,
             ease: "none",
-            onComplete: () => {
-                p.remove();
-            }
         }).
         to(p, {
             scale: 0,

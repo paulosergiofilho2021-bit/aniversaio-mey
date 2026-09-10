@@ -3,6 +3,9 @@
 
 *{box-sizing: border-box;}
 
+html{
+    overflow-x: hidden;
+}
 body {
     margin: 0;
     padding: 0;
@@ -54,7 +57,7 @@ body {
     width: 500px;
     background-color: rgb(255, 89, 255);
     opacity: 0.3;
-    position: absolute;
+    position: fixed;
     z-index: -2;
     border-radius: 50%;
     filter: blur(80px);

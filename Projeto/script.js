@@ -1,18 +1,25 @@
-
-gsap.from (".container", {
-    y: 100,
+gsap.from(".subline", {
     opacity: 0,
-    duration: 0.8,
-    stagger: 0.3,
+    width: 0,
+    duration: 3.5,
+    delay: 1.3
 });
+const tl = gsap.timeline();
+tl.from(".container", {
+    y: 150,
+    duration: 1,
+    opacity: 0,
+    stagger: 0.1,
+    ease: "back.out(2.5)"
+})
 function emoji () {
     let p = document.createElement("p");
     document.body.appendChild(p);
     p.classList.add("emoji");
     let emojis = ["❤️", "🌸","💐","🎉","🎁"];
     let randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
-    p.textContent = randomEmoji;
     const tl = gsap.timeline();
+    p.textContent = randomEmoji;
     tl.fromTo(p,
         {
             x: Math.random() * window.innerWidth,
@@ -31,12 +38,6 @@ function emoji () {
             onComplete: () => {
                 p.remove();
             }
-        })
-}
+        });
+};
 setInterval(emoji, 800);
-gsap.from(".subline", {
-    opacity: 0,
-    width: 0,
-    duration: 3.5,
-    delay: 1.5
-})

@@ -12,6 +12,7 @@ body {
     background: pink;
     min-height: 100vh;
     position: relative;
+    font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
 }
 .emoji {
@@ -22,33 +23,31 @@ body {
 }
 .name {
     position: relative;
-    height: 400px;
+    height: 300px;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
 .container-name{
-    gap: 30px;
+    gap: 10px;
     anchor-name: --name;
     display: flex;
 }
 .container {
     color: rgb(170, 0, 255);
     font-size: 100px;
-    font-family: 'Cormorant Garamond', serif;
-    font-style: italic;
-    font-weight: 700;
+    font-family: 'Cormorant Garamond', serif;    font-style: italic;
+    font-weight: 800;
     pointer-events: none;
 }
 .subline {
     height: 3px;
-    margin-top: 0.8rem;
-    width: 350px;
+    margin-top: 20px;
+    width: 330px;
     background-color: rgb(196, 63, 196);
     position: absolute;
-    left: anchor(left);
-    top: anchor(bottom);
+    position-area: bottom center;
     position-anchor: --name;
     border-radius: 5px;
 }
@@ -64,8 +63,27 @@ body {
     translate: -40% -40%;
     animation: aura 30s infinite alternate;
 }
+.phrase {
+    position: absolute;
+    position-anchor: --name;
+    position-area: top center;
+    width: 400px;
+    text-align: center;
+    color: #fcd34d;
+    letter-spacing: 3px;
+    filter: blur(0);
+    animation: phrase linear 2s;
+}
 @keyframes aura {
     to{
         transform: scale(5);
+    }
+}
+@keyframes phrase {
+    from{
+        filter: blur(5px);
+    }
+    to{
+        filter: blur(0);
     }
 }

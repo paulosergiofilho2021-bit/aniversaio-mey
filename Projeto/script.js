@@ -10,7 +10,7 @@ tl.from(".container", {
     duration: 0.8,
     opacity: 0,
     stagger: 0.1,
-    delay: 0.3,
+    delay: 0.6,
     ease: "back.out(2.5)"
 })
 function emoji () {
@@ -42,3 +42,15 @@ function emoji () {
         });
 };
 setInterval(emoji, 800);
+const containerLetter = document.querySelector(".container-lettter");
+const boxMessage = document.querySelector(".box-message");
+boxMessage.style.display = "none";
+const phrase = document.querySelector("#phrase");
+phrase.style.display = "none";
+
+setTimeout(() => {containerLetter.addEventListener("mousedown", () => {
+    boxMessage.style.display = "block";
+    const letterEmoji = document.querySelector(".letter-emoji");
+    letterEmoji.textContent = "💌";
+    phrase.style.display = "block";
+})}, 5000);

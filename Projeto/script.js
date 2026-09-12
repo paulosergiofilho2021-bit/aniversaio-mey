@@ -7,9 +7,10 @@ gsap.from(".subline", {
 const tl = gsap.timeline();
 tl.from(".container", {
     y: 150,
-    duration: 1,
+    duration: 0.8,
     opacity: 0,
     stagger: 0.1,
+    delay: 0.3,
     ease: "back.out(2.5)"
 })
 function emoji () {

@@ -37,9 +37,9 @@ body {
 .container {
     color: rgb(170, 0, 255);
     font-size: 100px;
-    font-family: 'Cormorant Garamond', serif;    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
     font-weight: 800;
-    pointer-events: none;
 }
 .subline {
     height: 3px;
@@ -67,12 +67,28 @@ body {
     position: absolute;
     position-anchor: --name;
     position-area: top center;
+    pointer-events: none;
     width: 400px;
     text-align: center;
-    color: #fcd34d;
+    color: #d9a441;
     letter-spacing: 3px;
     filter: blur(0);
-    animation: phrase linear 2s;
+    animation: phrase ease-out 2s;
+}
+.box-sub-phrase{
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 24px;
+}
+.sub-phrase{
+    color: #A64CA6;
+    animation: subphrase ease-out 2.5s;
+    animation-delay: 2s;
+    opacity: 0;
+    text-wrap: nowrap;
+    animation-fill-mode: both;
 }
 @keyframes aura {
     to{
@@ -82,8 +98,20 @@ body {
 @keyframes phrase {
     from{
         filter: blur(5px);
+        transform: translateY(-60px);
     }
     to{
         filter: blur(0);
+    }
+}
+
+@keyframes subphrase {
+    from{
+        opacity: 0;
+        letter-spacing: 17px;
+    }
+    to{
+        opacity: 1;
+        letter-spacing: 2px;
     }
 }

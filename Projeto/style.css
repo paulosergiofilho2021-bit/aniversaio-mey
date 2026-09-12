@@ -136,10 +136,27 @@ body::-webkit-scrollbar{
     padding-right: 20px;
     color: #c2185b;
 }
+
 #phrase{
     font-size: 17px;
     letter-spacing: 2px;
     line-height: 60px;
+}
+#box-message{
+    width: 100%;
+}
+@media (min-width: 946px) {
+    #box-message{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    .box-message{
+        max-width: 1000px;
+        padding-right: 100px;
+        padding-left: 100px;
+    }
 }
 @keyframes aura {
     to{

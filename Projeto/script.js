@@ -47,10 +47,13 @@ const boxMessage = document.querySelector(".box-message");
 boxMessage.style.display = "none";
 const phrase = document.querySelector("#phrase");
 phrase.style.display = "none";
+const anchor = document.querySelector(".anchor");
+anchor.style.display = "none";
 
 setTimeout(() => {containerLetter.addEventListener("mousedown", () => {
     boxMessage.style.display = "block";
     const letterEmoji = document.querySelector(".letter-emoji");
-    letterEmoji.textContent = "💌";
+    letterEmoji.textContent = "♥️";
     phrase.style.display = "block";
+    anchor.style.display = "block";
 })}, 5000);

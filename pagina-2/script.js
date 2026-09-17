@@ -27,3 +27,36 @@ function emoji () {
         });
 };
 setInterval(emoji, 800);
+
+const container = document.querySelector(".container");
+const after = document.querySelector("#after");
+const before = document.querySelector("#before");
+const counter = document.querySelector(".counter");
+let counterNumber = 1
+counter.textContent = `${counterNumber} /9`;
+
+after.addEventListener("click", () => {
+    container.scrollBy({
+        left: 320,
+        behavior: "smooth",
+    });
+
+    counterNumber++;
+    
+    if (counterNumber > 9){
+        counterNumber = 9;
+    };
+    counter.textContent = `${counterNumber} /9`;
+});
+before.addEventListener("click", () => {
+    container.scrollBy({
+        left: -320,
+        behavior: "smooth",
+    });
+    counterNumber--;
+    
+    if (counterNumber < 2){
+        counterNumber = 1;
+    };
+    counter.textContent = `${counterNumber} /9`;
+});

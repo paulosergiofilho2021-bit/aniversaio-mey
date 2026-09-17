@@ -16,6 +16,7 @@ body {
     overflow-x: hidden;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 .emoji {
     position: fixed;
@@ -51,58 +52,109 @@ body {
 }
 .container{
     display: flex;
-    height: 220px;
+    justify-content: flex-start;
+    overflow-x: auto;
+    height: 240px;
     width: 300px;
-    justify-content: center;
-    overflow: auto;
-    gap: 21px;
-    anchor-name: --container;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scroll-marker-group: after;
+    gap: 20px;
 }
 .card{
     border-radius: 1rem;
     position: relative;
-    height: 200px;
-    width: 260px;
+    height: 240px;
+    width: 300px;
     background: darkorchid;
     flex-shrink: 0;
-    scroll-snap-align: center;
 }
 .container::-webkit-scrollbar{
     display: none;
 }
-.container::scroll-button(left), .container::scroll-button(right){
-    content: "←";
-    height: 40px;
-    width: 40px;
-    border-radius: 50%;
-    border: none;
-    position: absolute;
-    position-anchor: --container;
-    position-area: left center;
-    translate: 50%;
-}
-.container::scroll-button(right){
-    content: "→";
-    position-area: right center;
-    translate: -50%;
-}
-.container::scroll-marker-group{
+.buttons {
     display: flex;
-    gap: 4px;
-    justify-content: center;
-    position-anchor: --container;
-    position-area: bottom center;
+    gap: 50px;
+    margin-top: 60px;
 }
-.card::scroll-marker{
-    content: "";
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #ff90de;
+.buttons button{
+    display: flex;justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    border: none;
+    height: 40px;
+    width: 100px;
+    color: #fff;
     cursor: pointer;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    padding: 30px 60px;
+    margin-top: 20px;
+}
+#after{
+    background-color: #10b981;
+}
+#before{
+    background-color: #e11d48;
+}
+.counter{
+    font-size: 2.5rem;
+    color: rebeccapurple;
+}
+.card:nth-child(1){
+    background-image: url(../img/086affc0-10c4-4141-bfa7-df42cd9d9b32.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(2){
+    background-image: url(../img/4da56172-844b-4efe-93c2-026737d386e9.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(3){
+    background-image: url(../img/639cd919-40ef-442e-a6fa-23cbe1f558a0.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(4){
+    background-image: url(../img/cb6c98c2-dbc1-4aa8-843d-fe1a1c9869b6.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(5){
+    background-image: url(../img/d4383e90-6afd-4f07-a324-3f1888ec9207.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(6){
+    background-image: url(../img/e3557bbb-51ee-4e27-afad-edac9eb696fd.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(7){
+    background-image: url(../img/e444bad2-526c-47b2-bc01-4d98fad6c225.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(8){
+    background-image: url(../img/f96439bb-6f06-447f-a6be-6a0c2de3f2cd.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.card:nth-child(9){
+    background-image: url(../img/a1280e81-fe26-42fc-ac5a-12bbf08d90c1.jpg);
+    background-position: 50% 0px;
+    background-size: cover;
+}
+.anchor{
+    text-decoration: none;
+    height: 40px;
+    width: auto;
+    padding: 0 20px;
+    background-color: #e11d48;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 1rem;
+    position: relative;
+    top: 90px;
 }
 @keyframes aura {
     to{

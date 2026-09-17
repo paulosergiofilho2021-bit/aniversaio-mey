@@ -79,7 +79,6 @@ window.addEventListener("load", () => {
     setTimeout(() => {
         preloader.classList.add("hide");
     }, 1000);
-});
-preloader.addEventListener("transitionend", () => {
+    preloader.addEventListener("transitionend", () => {
     preloader.style.display = "none";
-})
+})});

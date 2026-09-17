@@ -10,7 +10,7 @@ body {
     margin: 0;
     padding: 0;
     background: pink;
-    min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     font-family: 'Poppins', sans-serif;
     overflow-x: hidden;
@@ -155,6 +155,11 @@ body {
     border-radius: 1rem;
     position: relative;
     top: 90px;
+}
+.anchor2{
+    margin-top: 20px;
+    background-color: #ff90de;
+    color: #e11d48;
 }
 @keyframes aura {
     to{

@@ -36,19 +36,24 @@ let counterNumber = 1
 counter.textContent = `${counterNumber} /9`;
 
 after.addEventListener("click", () => {
+    const phrase = document.querySelector(".phrase");
+    phrase.textContent = "Lembra desses momentos?";
     container.scrollBy({
         left: 320,
         behavior: "smooth",
     });
-
     counterNumber++;
     
     if (counterNumber > 9){
         counterNumber = 9;
     };
     counter.textContent = `${counterNumber} /9`;
+    if(counterNumber === 9){
+        phrase.textContent = "💖"; 
+    };
 });
 before.addEventListener("click", () => {
+    const phrase = document.querySelector(".phrase");
     container.scrollBy({
         left: -320,
         behavior: "smooth",
@@ -59,4 +64,7 @@ before.addEventListener("click", () => {
         counterNumber = 1;
     };
     counter.textContent = `${counterNumber} /9`;
+    if(counterNumber < 9){
+        phrase.textContent = "Lembra desses momentos?";
+    };
 });

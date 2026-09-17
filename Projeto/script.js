@@ -56,7 +56,7 @@ setTimeout(() => {containerLetter.addEventListener("mousedown", () => {
     letterEmoji.textContent = "♥️";
     phrase.style.display = "block";
     anchor.style.display = "block";
-})}, 1000);
+})}, 5000);
 
 
 const preloader = document.querySelector(".preloader");

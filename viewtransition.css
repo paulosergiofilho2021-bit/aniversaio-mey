@@ -1,0 +1,9 @@
+@view-transition {
+  navigation: auto;
+}
+::view-transition-new{
+    animation: 2s;
+}
+::view-transition-old{
+    animation: 2s;
+}

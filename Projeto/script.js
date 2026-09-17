@@ -2,7 +2,7 @@ gsap.from(".subline", {
     opacity: 0,
     width: 0,
     duration: 3.5,
-    delay: 1.3
+    delay: 2.3
 });
 const tl = gsap.timeline();
 tl.from(".container", {
@@ -10,7 +10,7 @@ tl.from(".container", {
     duration: 0.8,
     opacity: 0,
     stagger: 0.1,
-    delay: 0.6,
+    delay: 1.6,
     ease: "back.out(2.5)"
 })
 function emoji () {
@@ -56,4 +56,30 @@ setTimeout(() => {containerLetter.addEventListener("mousedown", () => {
     letterEmoji.textContent = "♥️";
     phrase.style.display = "block";
     anchor.style.display = "block";
-})}, 5000);
+})}, 1000);
+
+
+const preloader = document.querySelector(".preloader");
+const progress = document.querySelector(".progress");
+let porcentage = 0;
+const counter = document.querySelector(".porcentage");
+
+const loading = setInterval(() => {
+        porcentage += 1;
+        
+        progress.style.width = `${porcentage}%`
+        if(porcentage >= 100){
+            clearInterval(loading);
+        };
+        counter.textContent = `Carregando: ${porcentage}%`
+}, 10);
+
+
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        preloader.classList.add("hide");
+    }, 1000);
+});
+preloader.addEventListener("transitionend", () => {
+    preloader.style.display = "none";
+})

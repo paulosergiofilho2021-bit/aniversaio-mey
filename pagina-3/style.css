@@ -124,6 +124,7 @@ body {
 .message {
   height: 570px;
   width: 400px;
+  max-width: 90%;
   background-color: antiquewhite;
   position: absolute;
   top: 10%;

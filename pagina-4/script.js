@@ -28,3 +28,20 @@ function emoji() {
   });
 }
 setInterval(emoji, 800);
+
+const video1 = document.querySelector(".video-1");
+const video2 = document.querySelector(".video-2");
+
+video1.addEventListener("click", () => {
+  if (video1.paused) {
+    video1.play();
+    video2.pause();
+  };
+});
+
+video2.setAttribute("click", () => {
+  if(video2.paused){
+    video2.play();
+    video1.pause();
+  };
+});

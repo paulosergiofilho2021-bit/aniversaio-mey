@@ -16,6 +16,7 @@ body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   position: relative;
 }
@@ -49,4 +50,72 @@ body {
   filter: blur(80px);
   translate: 40% 40%;
   animation: aura 20s infinite alternate;
+}
+.container-position {
+  height: auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 450px;
+  max-width: 90%;
+  width: 600px;
+  background-color: rgb(0, 0, 42);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.videos {
+  display: flex;
+  gap: 30px;
+}
+.videos video {
+  height: 350px;
+  border-radius: 1rem;
+  transition: all 0.3s;
+  max-height: 90%;
+  width: auto;
+}
+.videos video:hover {
+  transform: scale(1.1);
+}
+.button1,
+.button2 {
+  height: 20px;
+}
+.perfil {
+  display: flex;
+  position: absolute;
+  top: -14%;
+  right: 58%;
+  text-align: center;
+  gap: 20px;
+}
+.image-perfil {
+  width: 100px;
+  border-radius: 50%;
+}
+.container a {
+  font-size: 1.2rem;
+}
+@media (max-width: 460px) {
+  .videos video {
+    height: 235px;
+  }
+}
+@media (max-width: 600px) {
+  .perfil{
+    top: -30%;
+    right: 30%;
+    flex-direction: column;
+    gap: 0;
+  }
+  .link-perfil{
+    position: relative;
+    right: 16px;
+  }
 }

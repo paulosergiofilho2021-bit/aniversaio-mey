@@ -213,11 +213,12 @@ body {
   border-radius: 1rem;
   color: #fff;
   position: relative;
+  top: 50px;
 }
 .previous-page{
   left: 40px;
 }
-@media (max-width: 415px) {
+@media (max-width: 450px) {
   .message p {
     line-height: 33px;
   }

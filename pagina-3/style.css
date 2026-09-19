@@ -171,6 +171,10 @@ body {
   z-index: -1;
   opacity: 1;
   transition: all 1s;
+  line-height: 20px;
+}
+.message2 p{
+  line-height: 40px;
 }
 .message3 {
   line-height: 20px;
@@ -198,7 +202,7 @@ body {
 }
 .anchor {
   display: flex;
-  gap: 15px;
+  gap: 10px;
   flex-direction: column;
   position: relative;
 }

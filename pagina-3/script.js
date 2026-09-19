@@ -36,7 +36,6 @@ const buttons = document.querySelector(".buttons");
 let counter = 0;
 const image = document.querySelector(".image");
 const containerLetter = document.querySelector(".container-letter");
-const timer = true;
 
 image.addEventListener("click", () => {
   buttons.style.opacity = "1";
@@ -59,12 +58,11 @@ next.addEventListener("click", () => {
   console.log(counter);
 });
 previous.addEventListener("click", () => {
-    counter--;
-    if (counter < 0) {
-      counter++;
-    }
-    const message = document.querySelectorAll(".message")[counter];
-    message.classList.remove("next");
-    console.log(counter);
-    subBar.style.width = `${counter * 50}%`;
+  counter--;
+  if (counter < 0) {
+    counter++;
+  }
+  const message = document.querySelectorAll(".message")[counter];
+  message.classList.remove("next");
+  subBar.style.width = `${counter * 50}%`;
 });

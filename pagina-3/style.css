@@ -77,7 +77,7 @@ body {
   width: 60%;
   background-color: #ff90de;
   position: absolute;
-  top: 95%;
+  top: 80%;
   border-radius: 1rem;
   display: flex;
   gap: 18.5%;
@@ -103,6 +103,7 @@ body {
   background-color: deeppink;
   outline: 2px solid #ff90de;
   flex-shrink: 0;
+  transition: all 1s;
 }
 .sub-bar {
   width: 0%;
@@ -195,8 +196,25 @@ body {
   opacity: 0;
   transition: all 1s;
 }
+.anchor {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  position: relative;
+}
+.anchor a{
+  text-decoration: none;
+  background-color: #fe4dc9;
+  padding: 10px;
+  border-radius: 1rem;
+  color: #fff;
+  position: relative;
+}
+.previous-page{
+  left: 40px;
+}
 @media (max-width: 415px) {
-  .message p{
+  .message p {
     line-height: 33px;
   }
 }

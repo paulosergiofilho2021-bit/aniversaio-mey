@@ -203,8 +203,9 @@ body {
 .anchor {
   display: flex;
   gap: 10px;
-  flex-direction: column;
   position: relative;
+  transform: translateY(100px);
+  flex-direction: column;
 }
 .anchor a{
   text-decoration: none;
@@ -212,12 +213,8 @@ body {
   padding: 10px;
   border-radius: 1rem;
   color: #fff;
-  position: relative;
 }
-.previous-page{
-  left: 40px;
-}
-@media (max-width: 415px) {
+@media (max-width: 450px) {
   .message p {
     line-height: 33px;
   }

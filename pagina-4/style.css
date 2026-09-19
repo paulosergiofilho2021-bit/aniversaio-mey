@@ -68,6 +68,7 @@ body {
   justify-content: center;
   align-items: center;
   position: relative;
+  flex-direction: column;
 }
 .videos {
   display: flex;
@@ -82,6 +83,8 @@ body {
 }
 .videos video:hover {
   transform: scale(1.1);
+  outline: 2px solid #22d3ee;
+  box-shadow: 2px 2px 5px #22d3ee;
 }
 .button1,
 .button2 {
@@ -89,9 +92,9 @@ body {
 }
 .perfil {
   display: flex;
-  position: absolute;
+  position: relative;
   top: -14%;
-  right: 58%;
+  right: 35%;
   text-align: center;
   gap: 20px;
 }
@@ -102,20 +105,18 @@ body {
 .container a {
   font-size: 1.2rem;
 }
-@media (max-width: 460px) {
-  .videos video {
-    height: 235px;
-  }
-}
 @media (max-width: 600px) {
-  .perfil{
-    top: -30%;
-    right: 30%;
-    flex-direction: column;
-    gap: 0;
+  .videos video {
+    height: 280px;
   }
-  .link-perfil{
-    position: relative;
-    right: 16px;
+  .videos{
+    translate: 0 40px;
+  }
+  .perfil{
+    right: 46%;
+    margin-left: 200px;
+  }
+  .perfil a{
+    translate: 0px 50px;
   }
 }

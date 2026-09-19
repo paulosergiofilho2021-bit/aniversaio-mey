@@ -204,7 +204,7 @@ body {
   display: flex;
   gap: 10px;
   position: relative;
-  transform: translateY(100px);
+  transform: translateY(5px);
   flex-direction: column;
 }
 .anchor a{

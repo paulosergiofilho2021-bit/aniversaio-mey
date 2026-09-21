@@ -25,6 +25,7 @@ body {
     z-index: -1;
     font-family: "Segoe UI Emoji", sans-serif;
     animation: emoji 4s forwards;
+    left: 0;
 }
 .aura{
     height: 500px;

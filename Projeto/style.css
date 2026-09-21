@@ -69,6 +69,7 @@ body::-webkit-scrollbar{
     pointer-events: none;
     z-index: -1;
     font-family: "Segoe UI Emoji", sans-serif;
+    left: 0;
 }
 .name {
     position: relative;

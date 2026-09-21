@@ -26,6 +26,7 @@ body {
   pointer-events: none;
   z-index: -11;
   font-family: "Segoe UI Emoji", sans-serif;
+  left: 0;
 }
 .aura {
   height: 500px;
@@ -105,6 +106,21 @@ body {
 }
 .container a {
   font-size: 1.2rem;
+}
+.buttons{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  top: 50px;
+}
+.buttons a{
+  padding: 10px;
+  border-radius: 1rem;
+  background-color: #ff90de;
+  color: #fff;
+  text-decoration: none;
+  margin-top: 10px;
 }
 @media (max-width: 600px) {
   .videos video {

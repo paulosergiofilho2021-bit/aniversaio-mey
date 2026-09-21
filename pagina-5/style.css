@@ -69,7 +69,7 @@ body {
 @media (max-width: 440px){
   .title{
     transform: scale(0.7);
-    letter-spacing: 1px;
+    letter-spacing: -3px;
   }
 }
 .space{

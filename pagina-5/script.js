@@ -37,15 +37,12 @@ function emoji() {
   dot.style.top = `${randomHeight}px`;
   dot.style.opacity = "0";
   tl2.from(dot, {
-    y: randomHeight,
+    y: 500,
     duration: Math.random()  * 10 + 10,
     ease: "none",
     opacity: 1
   })
   
-  .to(dot,{
-    y: -500,
-  }, "<")
 
   .to(dot,
   {

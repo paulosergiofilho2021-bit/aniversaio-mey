@@ -2,14 +2,9 @@ function emoji() {
   let p = document.createElement("p");
   document.body.appendChild(p);
   p.classList.add("emoji");
-  let dot = document.createElement("label");
-  document.body.appendChild(dot);
-  dot.classList.add("dots");
-  dot.textContent = ".";
   let emojis = ["🌹"];
   let randomEmoji = emojis[Math.floor(Math.random() * emojis.length)];
   const tl = gsap.timeline();
-  const tl2 = gsap.timeline();
   p.textContent = randomEmoji;
   tl.fromTo(
     p,
@@ -31,26 +26,6 @@ function emoji() {
       p.remove();
     },
   });
-  let randomHeight = Math.random() * innerHeight;
-  let randomWidth = Math.random() * innerWidth;
-  dot.style.left = `${randomWidth}px`;
-  dot.style.top = `${randomHeight}px`;
-  dot.style.opacity = "0";
-  tl2.from(dot, {
-    y: 500,
-    duration: Math.random()  * 10 + 10,
-    ease: "none",
-    opacity: 1
-  })
-  
-
-  .to(dot,
-  {
-    opacity: 0,
-    onComplete: () => {
-      dot.remove();
-      },
-    });
 }
 setInterval(emoji, 1000);
 
@@ -72,3 +47,32 @@ const audio = new Audio("../audio/audio.mp3");
 audio.volume = 0.4;
 audio.loop = true;
 audio.play();
+
+function dots() {
+  let dot = document.createElement("label");
+  document.body.appendChild(dot);
+  dot.classList.add("dots");
+  dot.textContent = ".";
+  const tl2 = gsap.timeline();
+  let randomHeight = Math.random() * innerHeight;
+  let randomWidth = Math.random() * innerWidth;
+  dot.style.left = `${randomWidth}px`;
+  dot.style.top = `${randomHeight}px`;
+  dot.style.opacity = "0";
+  tl2.from(dot, {
+    y: 500,
+    duration: Math.random()  * 10 + 10,
+    ease: "none",
+    opacity: 1
+  })
+  
+
+  .to(dot,
+  {
+    opacity: 0,
+    onComplete: () => {
+      dot.remove();
+      },
+    });
+}
+setInterval(dots, 600);

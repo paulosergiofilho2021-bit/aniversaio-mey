@@ -29,19 +29,27 @@ function emoji() {
 }
 setInterval(emoji, 800);
 
-const video1 = document.querySelector(".video-1");
-const video2 = document.querySelector(".video-2");
+const container = document.querySelector(".container");
+const boxtMessage1 = document.querySelector(".text-message-1");
+const images = document.querySelector(".images");
 
-video1.addEventListener("click", () => {
-  if (video1.paused) {
-    video1.play();
-    video2.pause();
-  };
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.style.transform = "translateX(0)";
+      entry.target.style.opacity = "1";
+    }
+  });
 });
 
-video2.setAttribute("click", () => {
-  if(video2.paused){
-    video2.play();
-    video1.pause();
-  };
+observer.observe(container);
+observer.observe(boxtMessage1);
+observer.observe(images);
+
+
+const gift = document.querySelector(".gift");
+const imgRosa = document.querySelector(".image-rosa");
+gift.addEventListener("click", () => {
+  gift.style.opacity = "0";
+  imgRosa.style.opacity = "1";
 });

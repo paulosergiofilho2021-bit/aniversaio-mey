@@ -265,7 +265,7 @@ body {
   margin-top: 70px;
 }
 .container-kae{
-  width: clamp(30vw, 60vw, 1000px);
+  width: clamp(30vw, 90vw, 1000px);
   background-color: #fc6ad0;
   border-radius: 1rem;
   padding: 20px;
@@ -303,14 +303,16 @@ body {
   position: relative;
   align-items: end;
   overflow: hidden;
+  anchor-name: --bar;
 }
 .sub-bar{
   position: absolute;
-  height: 10%;
+  height: 0%;
   width: 100%;
   background-color: chartreuse;
+  transition: all 0.3s;
 }
-.buttons-bar div{
+.buttons-bar button{
   text-align: center;
   height: 50px;
   width: 50px;
@@ -318,11 +320,15 @@ body {
   line-height: 50px;
   margin: 30px;
   border-radius: 0.5rem;
+  color: #fff;
+  border: none;
 }
 .heart{
   margin-right: 50px;
   font-size: 170px;
   color: red;
+  pointer-events: none;
+  filter: blur(5px);
 }
 .container-heart{
   display: flex;
@@ -332,8 +338,21 @@ body {
   position: relative;
   transform: translate(150px);
   text-wrap: nowrap;
+  bottom: 10px;
+  z-index: 10;
+  color: #fff;
+  pointer-events: none;
+  filter: blur(5px);
 }
-
+.opacity-counter{
+  position-anchor: --bar;
+  position-area: top center;
+  position: absolute;
+  color: #fff;
+  background-color: #444;
+  padding: 10px 15px;
+  border-radius: 0.5rem;
+}
 
 
 
@@ -378,6 +397,8 @@ body {
   .container-kae{
     margin: auto;
   }
+}
+@media (max-width: 470px){
   .container-bar{
     justify-content: end;
   }

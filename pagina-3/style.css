@@ -38,7 +38,7 @@ body {
   background-color: rgb(255, 89, 255);
   opacity: 0.4;
   position: fixed;
-  z-index: -2;
+  z-index: -4;
   border-radius: 50%;
   filter: blur(80px);
   translate: -40% -40%;
@@ -50,7 +50,7 @@ body {
   background-color: #ff90de;
   opacity: 0.4;
   position: fixed;
-  z-index: -2;
+  z-index: -4;
   border-radius: 50%;
   filter: blur(80px);
   translate: 40% 40%;
@@ -77,12 +77,9 @@ body {
   height: 9px;
   width: 60%;
   background-color: #ff90de;
-  position: absolute;
-  top: 80%;
+  position: relative;
   border-radius: 1rem;
   display: flex;
-  gap: 18.5%;
-  anchor-name: --bar;
   border: 2px solid #ff90de;
   justify-content: flex-start;
   align-items: center;
@@ -167,6 +164,7 @@ body {
   align-items: center;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: all 0.4s;
 }
 .message2 {
   z-index: -1;
@@ -214,6 +212,9 @@ body {
   padding: 10px;
   border-radius: 1rem;
   color: #fff;
+}
+.buttons button:active{
+  transform: scale(0.9);
 }
 @media (max-width: 450px) {
   .message p {

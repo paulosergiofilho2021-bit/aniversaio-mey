@@ -32,6 +32,7 @@ setInterval(emoji, 800);
 const container = document.querySelector(".container");
 const boxtMessage1 = document.querySelector(".text-message-1");
 const images = document.querySelector(".images");
+const messageKae = document.querySelector(".container-kae");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -45,6 +46,7 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(container);
 observer.observe(boxtMessage1);
 observer.observe(images);
+observer.observe(messageKae);
 
 
 const gift = document.querySelector(".gift");

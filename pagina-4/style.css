@@ -179,7 +179,7 @@ body {
   justify-content: end;
 }
 .text-message-1 {
-  width: 470px;
+  width: clamp(470px, 470px, 80vw);
   padding: 20px;
   font-family: "Tangerine", cursive;
   font-weight: 1000;
@@ -228,13 +228,6 @@ body {
 .image-meme-3 img {
   width: 200px;
 }
-@media (max-width: 870px) {
-  .images-container-meme{
-    height: auto;
-    flex-direction: column;
-    padding: 40px;
-  }
-}
 .gift-container{
   position: relative;
   width: 100%;
@@ -253,10 +246,139 @@ body {
 .gift{
   font-size: 170px;
   z-index: 10;
+  background-color: #fc6ad0;
+  padding: 40px;
+  border-radius: 1rem;
 }
 .image-rosa{
   position: absolute;
-  height: 300px;
+  width: 300px;
   opacity: 0;
   transition: all 0.5s;
+  max-width: 80vw;
+  margin: auto;
+}
+.message-kae{
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  margin-top: 70px;
+}
+.container-kae{
+  width: clamp(30vw, 60vw, 1000px);
+  background-color: #fc6ad0;
+  border-radius: 1rem;
+  padding: 20px;
+  line-height: 30px;
+  max-width: 90vw;
+  text-align: center;
+  margin: auto;
+  transition: all 2s;
+  transform: translateX(-100%);
+}
+.text-kae{
+  color: #fff;
+}
+.img-kae{
+  width: 300px;
+  border-radius: 1rem;
+  max-width: 30vw;
+}
+.remetent-kae{
+  color: #fff;
+  margin-bottom: 50px;
+}
+.container-bar{
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.bar{
+  height: 300px;
+  min-width: 70px;
+  background-color: #444;
+  display: flex;
+  border-radius: 0.5rem;
+  position: relative;
+  align-items: end;
+  overflow: hidden;
+}
+.sub-bar{
+  position: absolute;
+  height: 10%;
+  width: 100%;
+  background-color: chartreuse;
+}
+.buttons-bar div{
+  text-align: center;
+  height: 50px;
+  width: 50px;
+  background-color: #444;
+  line-height: 50px;
+  margin: 30px;
+  border-radius: 0.5rem;
+}
+.heart{
+  margin-right: 50px;
+  font-size: 170px;
+  color: red;
+}
+.container-heart{
+  display: flex;
+}
+.phrase-heart{
+  align-self: center;
+  position: relative;
+  transform: translate(150px);
+  text-wrap: nowrap;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 870px) {
+  .title{
+    font-size: 85px;
+  }
+  .images-container-meme{
+    height: auto;
+    flex-direction: column;
+    padding: 40px;
+    gap: 0px;
+  }
+  .container{
+    width: 380px;
+    margin: auto;
+    margin-bottom: 60px;
+  }
+  .text-message-1{
+    margin-left: 0;
+    width: 360px;
+    margin: auto;
+  }
+  .container-kae{
+    margin: auto;
+  }
+  .container-bar{
+    justify-content: end;
+  }
 }
